@@ -6,7 +6,7 @@ WARN=80
 
 ALERT=95
 
-EMAIL="playplaystore330@gmail.com"
+EMAIL="email@email.com"
 
 INTERVAL=10
 
@@ -18,7 +18,7 @@ LAST_ALERT_TIME=0
 
 
 
-# Clean exit on CTRL+C
+#  exit on (CTRL+C)
 
 trap "echo 'Stopping CPU monitor...'; exit 0" SIGINT SIGTERM
 
@@ -100,7 +100,7 @@ echo "$MESSAGE" | mail -s "CPU WARNING" "$EMAIL"
 
 
 
-# run in background so it doesn't block
+
 
 ( zenity --warning --title="CPU WARNING" --text="$MESSAGE" --ok-label="Cancel" ) &
 
